@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = '- Mi primera APP -';
+  public heroNames: string[] =['Spiderman','Hulk','Dr Strange','Black Widow','Thor'];
+  public deletedHeroe?: string;
+
+  removeLastHero():void{
+    this.deletedHeroe = this.heroNames.pop();
+    console.log(this.deletedHeroe);
+  }
 }
